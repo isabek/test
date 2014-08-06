@@ -7,7 +7,8 @@
         "swig": "*",
         "wire": "latest",
         "underscore": "latest",
-        "env-config-loader": "git+https://bitbucket.org/tsyganov/env-config-loader.git"
+        "env-config-loader": "git+https://bitbucket.org/tsyganov/env-config-loader.git",
+        "express-router": "git+https://bitbucket.org/tsyganov/express-router.git"
     },
     "scripts": {
         "start": "node application/app.js"

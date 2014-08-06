@@ -1,7 +1,7 @@
 module.exports = {
     'swig-bridge': {
         create: {
-            module: require('./lib/swig-bridge'),
+            module: require("./lib/swig-bridge"),
             args: [
                 { cache: false }
             ]
@@ -9,7 +9,7 @@ module.exports = {
     },
     'app': {
         create: {
-            module: require('./lib/express-bridge'),
+            module: require("./lib/express-bridge"),
             args: [
                 {
                     renderer: { $ref: "swig-bridge" },
@@ -17,6 +17,28 @@ module.exports = {
                     staticDir: global.ROOT_DIR + 'public'
                 }
             ]
+        }
+    },
+    'routes': require("./routes"),
+    'router': {
+        create: {
+            module: require('express-router')
+        },
+        ready: {
+            setRoutes: [
+                { $ref: 'routes' }
+            ],
+            setApp: [
+                { $ref: 'app' }
+            ],
+            setLogger: [ console ]
+        }
+    },
+
+    //Controllers
+    'index-controller': {
+        create: {
+            module : require("./controllers/index")
         }
     }
 };

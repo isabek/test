@@ -6,7 +6,7 @@ var SwigBridge = function (options) {
 
 SwigBridge.prototype.getRenderer = function () {
 
-    swig.setDefaults(this._options);
+//    swig.setDefaults(this._options);
     return swig.renderFile;
 };
 
