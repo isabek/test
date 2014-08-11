@@ -38,7 +38,12 @@ module.exports = {
     //Controllers
     'index-controller': {
         create: {
-            module : require("./controllers/index")
+            module: require("./controllers/index")
+        }
+    },
+    'destinations-controller': {
+        create: {
+            module: require("./controllers/destinations")
         }
     }
 };

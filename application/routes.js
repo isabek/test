@@ -4,5 +4,11 @@ module.exports = {
         path: '/',
         controller: 'index-controller',
         method: 'index'
+    },
+    'destinations': {
+        httpMethod: 'get',
+        path: '/destinations',
+        controller: 'destinations-controller',
+        method: 'topDestinations'
     }
 };
