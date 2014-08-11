@@ -45,5 +45,11 @@ module.exports = {
         create: {
             module: require("./controllers/destinations")
         }
+    },
+
+    'trackers-controller': {
+        create: {
+            module: require("./controllers/trackers")
+        }
     }
 };

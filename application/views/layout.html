@@ -75,6 +75,16 @@
                 <span>Destinations</span>
             </a>
         </li>
+        <li {% if request.url === '/trackers' %} class="active" {% endif %}>
+            <div>
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a href="/trackers">
+                <i class="icon-bar-chart"></i>
+                <span>Trackers</span>
+            </a>
+        </li>
     </ul>
 </div>
 

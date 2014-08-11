@@ -10,5 +10,12 @@ module.exports = {
         path: '/destinations',
         controller: 'destinations-controller',
         method: 'topDestinations'
+    },
+
+    'trackers': {
+        httpMethod: 'get',
+        path: '/trackers',
+        controller: 'trackers-controller',
+        method: 'topTrackers'
     }
 };
