@@ -12,6 +12,13 @@ module.exports = {
         method: 'topDestinations'
     },
 
+    'destination-domain': {
+        httpMethod: 'get',
+        path: '/destinations/:destination',
+        controller: 'destinations-controller',
+        method: 'destinationDomain'
+    },
+
     'trackers': {
         httpMethod: 'get',
         path: '/trackers',

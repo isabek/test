@@ -8,4 +8,10 @@ DestinationsController.prototype.topDestinations = function (request, response) 
     });
 };
 
+DestinationsController.prototype.destinationDomain = function (request, response) {
+    response.render("destination.html", {
+
+    });
+};
+
 module.exports = DestinationsController;
