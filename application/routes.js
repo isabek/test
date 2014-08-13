@@ -23,6 +23,13 @@ module.exports = {
         httpMethod: 'get',
         path: '/trackers',
         controller: 'trackers-controller',
-        method: 'topTrackers'
+        method: 'topTrackersView'
+    },
+
+    'tracker': {
+        httpMethod: 'get',
+        path: '/trackers/1',
+        controller: 'trackers-controller',
+        method: 'trackerView'
     }
 };

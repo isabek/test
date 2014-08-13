@@ -1,0 +1,369 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %} Tracker Name {% endblock %}
+
+{% block content %}
+
+<div class="row-fluid header">
+    {% include '_search.html' %}
+    <h3>Tracker Name</h3>
+</div>
+
+<div class="row-fluid section">
+    <div class="span10 ">
+        <table>
+            <thead>
+            <tr>
+                <td>Platform</td>
+                <td>Country</td>
+                <td>Ad Network</td>
+                <td>OS</td>
+                <td>Time Frame</td>
+                <td></td>
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <div class="ui-select margin-right-10">
+                        <select>
+                            <option>All</option>
+                            <option>Mobile</option>
+                            <option>Web</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui-select margin-right-10">
+                        <select>
+                            <option>GB</option>
+                            <option>AU</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui-select margin-right-10">
+                        <select>
+                            <option>ad cash</option>
+                            <option>propeller</option>
+                            <option>widget</option>
+                            <option>all</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui-select margin-right-10">
+                        <select>
+                            <option>All</option>
+                            <option>Windows</option>
+                            <option>Mac</option>
+                            <option>iOS</option>
+                            <option>Android</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui-select margin-right-10">
+                        <select>
+                            <option>5 days</option>
+                            <option>7 days</option>
+                            <option>14 days</option>
+                            <option>30 days</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn-flat">Filter</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="row-fluid section">
+
+    <div class="bs-docs-example">
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+                <li class=""><a href="#top-destination" data-toggle="tab">Top Destinations</a></li>
+                <li class=""><a href="#related-trackers" data-toggle="tab">Related Trackers</a></li>
+                <li class=""><a href="#top-landing-pages" data-toggle="tab">Top Landing Pages</a></li>
+            </ul>
+            <div class="tab-content" style="overflow: hidden;">
+                <div class="tab-pane active" id="overview">
+
+                    <div class="span12">
+                        <h5>Impressions</h5>
+                        <br>
+
+                        <div id="hero-area" style="height: 250px;"></div>
+                    </div>
+
+                    <div class="span12">
+                        <div class="span6 chart">
+                            <h5>Traffic source</h5>
+
+                            <div id="traffic-source-chart" style="height: 250px;"></div>
+                        </div>
+                        <div class="span6 chart">
+                            <h5>Country</h5>
+
+                            <div id="country-chart" style="height: 250px;"></div>
+                        </div>
+                    </div>
+                    <div class="span12">
+                        <div class="span6 chart">
+                            <h5>OS</h5>
+
+                            <div id="os-chart" style="height: 250px;"></div>
+                        </div>
+                        <div class="span6 chart">
+                            <h5>Platform</h5>
+
+                            <div id="platform-chart" style="height: 250px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="top-destination">
+                    <div class="span12">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="span3">
+                                    <span class="line"></span>Name
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Browser
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Platform(s)
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Engine version
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>CSS grade
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- row -->
+                            <tr class="first">
+                                <td>
+                                    <a href="#">Destination Name</a>
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                            </tr>
+                            <tr class="first">
+                                <td>
+                                    <a href="#">Destination Name</a>
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="related-trackers">
+                    <div class="span12">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="span3">
+                                    <span class="line"></span>Name
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Browser
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Platform(s)
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Engine version
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>CSS grade
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- row -->
+                            <tr class="first">
+                                <td>
+                                    <a href="#">Tracker Name</a>
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="top-landing-pages">
+
+                    <div class="span12">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="span3">
+                                    <span class="line"></span>Rendering engine
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Browser
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Platform(s)
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Engine version
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>CSS grade
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- row -->
+                            <tr class="first">
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                                <td>
+                                    Lorem Ipsum
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+    Morris.Area({
+        element: 'hero-area',
+        data: [
+            {period: '2010 Q1', iphone: 2666},
+            {period: '2010 Q2', iphone: 2778},
+            {period: '2010 Q3', iphone: 4912},
+            {period: '2010 Q4', iphone: 3767},
+            {period: '2011 Q1', iphone: 6810},
+            {period: '2011 Q2', iphone: 5670},
+            {period: '2011 Q3', iphone: 4820},
+            {period: '2011 Q4', iphone: 15073},
+            {period: '2012 Q1', iphone: 10687},
+            {period: '2012 Q2', iphone: 8432}
+        ],
+        xkey: 'period',
+        ykeys: ['iphone'],
+        labels: ['iPhone'],
+        lineWidth: 2,
+        hideHover: 'auto',
+        lineColors: ["#81d5d9"]
+    });
+
+    Morris.Donut({
+        element: 'traffic-source-chart',
+        data: [
+            {label: 'Direct', value: 25 },
+            {label: 'Referrals', value: 40 },
+            {label: 'Search engines', value: 25 },
+            {label: 'Unique visitors', value: 10 }
+        ],
+        colors: ["#30a1ec", "#76bdee", "#c4dafe"],
+        formatter: function (y) {
+            return y + "%"
+        }
+    });
+
+    Morris.Donut({
+        element: 'country-chart',
+        data: [
+            {label: 'USA', value: 25 },
+            {label: 'Canada', value: 10 },
+            {label: 'Australia', value: 15 },
+            {label: 'Brazil', value: 10 },
+            {label: 'China', value: 10 },
+            {label: 'France', value: 20 },
+            {label: 'Germany', value: 10 }
+        ],
+        colors: ["#30a1ec", "#76bdee", "#c4dafe"],
+        formatter: function (y) {
+            return y + "%"
+        }
+    });
+
+    Morris.Donut({
+        element: 'os-chart',
+        data: [
+            {label: 'IOS', value: 10 },
+            {label: 'Android', value: 25 },
+            {label: 'Windows', value: 40 },
+            {label: 'Linux', value: 25 }
+        ],
+        colors: ["#30a1ec", "#76bdee", "#c4dafe"],
+        formatter: function (y) {
+            return y + "%"
+        }
+    });
+
+    Morris.Donut({
+        element: 'platform-chart',
+        data: [
+            {label: 'Mobile', value: 45 },
+            {label: 'WEB', value: 55 }
+        ],
+        colors: ["#30a1ec", "#76bdee", "#c4dafe"],
+        formatter: function (y) {
+            return y + "%"
+        }
+    });
+
+</script>
+{% endblock %}

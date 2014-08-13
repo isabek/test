@@ -75,7 +75,7 @@
                 <span>Destinations</span>
             </a>
         </li>
-        <li {% if request.url === '/trackers' %} class="active" {% endif %}>
+        <li {% if request.url.indexOf('/trackers') > -1 %} class="active" {% endif %}>
             <div>
                 <div class="arrow"></div>
                 <div class="arrow_border"></div>
